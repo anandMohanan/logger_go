@@ -15,7 +15,7 @@ func (l *Logger) log(level LogLevel, logMessage string, args ...interface{}) {
 	if len(message) > maxMessageLength {
 		message = message[:maxMessageLength] + " [log trimmed]"
 	}
-	timestamp := time.Now().Format("2006-01-02 15:04:05")
+	timestamp := time.Now().Format("2024-02-28 15:04:05")
 	logLevel := [...]string{"INFO", "DEBUG", "ERROR"}[level]
 	logMessageFmt := fmt.Sprintf("[%s] [%s] %s\n", timestamp, logLevel, message)
 	fmt.Print(logMessageFmt)
